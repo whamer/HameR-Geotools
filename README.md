@@ -7,5 +7,5 @@ Before you can use the tools you need to take some [preparation steps](preparati
 
 | Name | Function | Required packages |
 |------|----------|-------------------|
-|[IDW CV](./Tools/IDW_CV.rsx)|Inverse distance weighting interpolation and leave one out cross validation|gstat, raster, sf [Link]("./lib_r/idw_cv.r")|
+|[IDW CV](./Tools/IDW_CV.rsx)|Inverse distance weighting interpolation and leave one out cross validation|gstat, raster, sf [Link](./lib_r/idw_cv.r)|
 |      |          |                   |
