@@ -7,6 +7,10 @@ Before you can use the tools you need to:
 
 ## 2. [Implement](https://docs.qgis.org/3.10/en/docs/user_manual/plugins/plugins.html) the QGIS Plugin [Processing R Provider](https://plugins.qgis.org/plugins/processing_r/)
 
+![QGIS Plugin](./img/erweiterung.png)
+
+![Implement QGIS Plugin](./img/erweiterunginstall.png)
+
 ## 3. Implement Tool
 Either create a new R-Tool 
 
@@ -31,4 +35,7 @@ and then install the packages
 ![Install R library](./img/installr.png)
 
 
-## 5. Use the tool in Python
+## 5. Use the tool in QGIS
+
+![Use the tool](./img/usage.png)
+
