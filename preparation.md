@@ -10,7 +10,11 @@ Before you can use the tools you need to:
 ![Implement QGIS Plugin](./img/erweiterunginstall.png)
 
 ## 3. Implement Tool
-Either create a new R-Tool 
+Either clone this repository and link the tools folder to QGIS
+
+![Link it](./img/addrtools.png)
+
+or create a new R-Tool 
 
 ![create a new R-Tool](./img/create_script.png "Create a new R-Tool")
 

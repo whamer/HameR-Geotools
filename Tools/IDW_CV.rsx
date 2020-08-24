@@ -1,4 +1,4 @@
-##Hamer Geotools=group
+##HameR Geotools=group
 ##Layer=vector
 ##X=Field Layer
 ##IDP=number
