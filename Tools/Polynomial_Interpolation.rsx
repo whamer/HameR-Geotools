@@ -6,6 +6,7 @@
 ##Resolution=number
 ##Poly_Raster=output raster
 ##Poly_Vector=output vector
+##showplots
 library(raster)
 library(sf)
 
@@ -33,3 +34,8 @@ Poly_Vector=as.data.frame(do.call("rbind",Map(function(x){
 x=1:nrow(trainda))))
 
 st_geometry(Poly_Vector)=st_geometry(Layer)
+
+loocv2=data.frame(Predicted=Poly_Vector$var1.pred,Observed=Poly_Vector$observed)
+plot(loocv2,asp=1)
+abline(0,1)
+legend("topleft", legend=c(paste("RMSE:",round(sqrt(mean(Poly_Vector$residual^2,na.rm=TRUE)),3))))
