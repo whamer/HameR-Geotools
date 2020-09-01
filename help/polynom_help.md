@@ -1,11 +1,15 @@
-# HameR-Geotools
-R-scripts making geoprocessing tools from R ready to use in QGIS
+# Polynomial Interpolation
 
-Before you can use the tools you need to take some [preparation steps](preparation.md).
 
-## Tool overview:
-
-| Name | Function | Required packages |
+| Parameter | Default | Meaning |
 |------|----------|-------------------|
-|[IDW CV](./Tools/IDW_CV.rsx)|Inverse distance weighting interpolation and leave one out cross validation|gstat, raster, sf [Link](./lib_r/idw_cv.r)|
-|[Polynomial Interpolation](./Tools/Polynomial_Interpolation.rsx)|Polynomial Interpolation and leave one out cross validation|raster, sf [Link](./lib_r/idw_cv.r)|
+|Layer (vector)| ~~~~ | The point layer containing the aim variable|
+|X (Field of Layer)| ~~~~ | The column containing the data of the aim variable|
+|Order (number)| 1 | Polynomial order of the interpolation|
+|Use Raster as Aim (Boolean)| True | If True, the information of the *Raster as Aim* are used for the *Poly Raster*. Else the *Extent* and *Resolution* are used.|
+|Raster as Aim (optional raster)| ~~~~ | Raster structure used for the *Poly Raster*|
+|Extent (optional)| ~~~~ | Extent used for the *Poly Raster*|
+|Resolution (optional number)| ~~~~ | Resolution used for the *Poly Raster*|
+|Poly_Raster (output raster)| ~~~~ | Raster containing the Polynomial prediction|
+|Poly_Vector (output vector)| ~~~~ | Vector containing the result of a Leave one out crossvalidation|
+
