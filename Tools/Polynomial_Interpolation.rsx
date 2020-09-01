@@ -1,9 +1,11 @@
 ##HameR Geotools=group
 ##Layer=vector
 ##X=Field Layer
-##Order=number
-##Extent=extent
-##Resolution=number
+##Order=number 1
+##Use_Raster_as_Aim=Boolean True
+##Raster_as_Aim=optional raster
+##Extent=optional extent
+##Resolution=optional number
 ##Poly_Raster=output raster
 ##Poly_Vector=output vector
 ##showplots
@@ -15,7 +17,12 @@ trainda$aim=Layer[[X]]
 
 model <- lm(aim ~ poly(X,Order)+poly(Y,Order),data=trainda)
 
-newda=raster(ext=Extent,resolution=c(Resolution,Resolution),crs=st_crs(Layer)$proj4string)
+if(Use_Raster_as_Aim){
+  newda=Raster_as_Aim
+}else{
+  newda=raster(ext=Extent,resolution=c(Resolution,Resolution),crs=st_crs(Layer)$proj4string)
+}
+
 coords=coordinates(newda)
 newda$X=coords[,1]
 newda$Y=coords[,2]
