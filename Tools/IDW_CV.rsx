@@ -2,7 +2,7 @@
 ##Layer=vector
 ##X=Field Layer
 ##IDP=number 2.0
-##Number_of_Neighbours=number
+##Number_of_Neighbours=number 12
 ##Use_Raster_as_Aim=Boolean True
 ##Raster_as_Aim=optional raster
 ##Extent=optional extent
@@ -15,7 +15,9 @@ library(raster)
 library(sf)
 
 if(Use_Raster_as_Aim){
-  newda=as(Raster_as_Aim, 'SpatialGridDataFrame')
+  #newda=as(Raster_as_Aim, 'SpatialGridDataFrame')
+  newda=as(raster(ext=extent(Raster_as_Aim),resolution=c(res(Raster_as_Aim)[1],res(Raster_as_Aim)[2]),crs=crs(Raster_as_Aim),vals=1), 'SpatialGridDataFrame')
+  Layer=st_transform(Layer, crs=st_crs(crs(newda)))
 }else{
   newda=as(raster(ext=Extent,resolution=c(Resolution,Resolution),crs=st_crs(Layer)$proj4string,vals=1), 'SpatialGridDataFrame')
 }
