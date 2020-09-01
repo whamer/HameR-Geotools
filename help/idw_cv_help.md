@@ -3,7 +3,7 @@
 
 | Parameter | Default | Meaning |
 |------|----------|-------------------|
-|Layer (vector)| | word|
+|Layer (vector)|~~~ | word|
 |X (Field of Layer)| | word|
 |IDP (number)| 2 | word|
 |Number of Neighbours (number)| | word|
